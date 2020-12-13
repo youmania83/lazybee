@@ -17,7 +17,6 @@ print (red+b+"""
         (-|   (-/_|(- /(-\_/  (-|__|-|_,(-|_,  
          _|__,_/  |,_/__,_|,   _|__)_|__,_|__, 
         (    (     (    (     (    (    (      
-
 """+b+red)
 
 print (gren+b+"            <===[[ coded by N17R0 ]]===>"+b+gren)
@@ -25,10 +24,10 @@ print (" ")
 print (yellow+b+"     <---( search on youtube noob hackers)--->"+b+yellow)
 print (" ")
 
-length=int(raw_input(cyan+b+"Enter the number of characters: "+b+cyan))
+length=int(input(cyan+b+"Enter the number of characters: "+b+cyan))
 print (" ")
-name=raw_input(cyan+b+"Name your wordlist wit (.txt) extension: "+b+cyan)
-tic = time.clock()
+name=input(cyan+b+"Name your wordlist wit (.txt) extension: "+b+cyan)
+tic = time.perf_counter()
 print (" ")
 print (blue+b+"<><><><><><><><><><><><><><><><><><><><><>"+b+blue)
 print (" ")
@@ -36,24 +35,24 @@ print (yellow+b+"Wordlist Generating Please Wait!"+b+yellow)
 print (" ")
 print (blue+b+"<><><><><><><><><><><><><><><><><><><><><>"+b+blue)
 print (" ")
-lista=[0 for x in xrange(length)]
+lista=[0 for x in range(length)]
 x=length-1
 string="abcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*"
 list_of_results=[]
-file1=file(name,"w")
+file1=open(name,"w")
 while(x>-1):
     result=""
     if lista[x]==len(string)-1:
-        for z in xrange (length):
+        for z in range (length):
             result+=string[lista[z]]
         lista[x]=0
         x-=1
     elif x==length-1:
-        for z in xrange(length):
+        for z in range(length):
             result+=string[lista[z]]
         lista[x]+=1
     else:
-        for z in xrange(length):
+        for z in range(length):
             result+=string[lista[z]]
         lista[x]+=1
         if x>0:
@@ -61,7 +60,7 @@ while(x>-1):
         else:
             x=length-1
     file1.write(result+"\n")
-toc = time.clock()
+toc = time.perf_counter()
 ttn = toc - tic
 print (red+b+"<<<========================================>>>"+b+red)
 print (" ")
